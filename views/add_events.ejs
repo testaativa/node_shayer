@@ -1,0 +1,67 @@
+<% layout('includes/layout') %>
+
+<div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Admin</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="dashboard">Home</a>
+                        </li>
+                        <li>
+                            <a href="events">Events</a>
+                        </li>
+                         <li class="active">
+                             <strong>Add events</strong>
+                        </li>
+                    </ol>
+                </div>
+</div>
+
+
+
+            <div class="wrapper wrapper-content animated fadeInRight">
+                   <div class="col-lg-10" style="margin-bottom:31px;">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Add events</h5>
+                        </div>
+                        <div class="ibox-content">
+
+
+
+          <form class="form-horizontal" id="myForm" action='add_events' method="post">
+
+              <div class="form-group"><label class="col-lg-2 control-label">Event name</label>
+                <div class="col-lg-6"><input type="text" name="event_name" placeholder=" Add event name" class="form-control" required="">
+                </div>
+             </div>
+             <div class="form-group"><label class="col-lg-2 control-label">Cash prize</label>
+                <div class="col-lg-6"><input type="text" name="cash_prize" placeholder="Enter cash prize" class="form-control" required="">
+                </div>
+             </div>
+             <div class="form-group"><label class="col-lg-2 control-label">Winning Code</label>
+                <div class="col-lg-6"><input type="text" name="code" placeholder="Enter winning code" class="form-control" required="">
+                </div>
+             </div>
+             <div class="form-group"><label class="col-lg-2 control-label">Participating Brands</label>
+               <div class="col-lg-6"><input type="text" name="brands" placeholder="Enter participating brands" class="form-control" required="">
+               </div>
+             </div>
+             <div class="form-group"><label class="col-lg-2 control-label">Number of Winners</label>
+               <div class="col-lg-6"><input type="text" name="num_winners" placeholder="Enter number of winners" class="form-control" required="">
+               </div>
+             </div>
+             <div class="form-group"><label class="col-lg-2 control-label">Cash Prize for Each Winner</label>
+               <div class="col-lg-6"><input type="" name="cash_prize_winner" placeholder="Enter cash prize for each winner" class="form-control" required="">
+               </div>
+             </div>
+            <div class="form-group">
+              <div class="col-lg-offset-2 col-lg-10"><button class="btn btn-sm btn-primary" type="button" id="apbutton" onclick="checkForm();">submit</button>
+             </div>
+            </div>
+          </form>
+
+                        </div>
+                    </div>
+                </div>
+          </div>

@@ -1,0 +1,69 @@
+<% layout('includes/layout') -%>
+
+<div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Admin</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="dashboard">home</a>
+                        </li>
+                        <li class="active">
+                       <strong>Events</strong>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+
+<div class="wrapper wrapper-content  animated fadeInRight">
+<div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5 style="color:#0080FF;">Events </h5>
+
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+                              <form action="#" method="get" role="search">
+                                <input type="hidden" name="id">
+                              </form>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                       <th>Event Id</th>
+                                       <th>Cash Prize</th>
+                                       <th>Winning code</th>
+                                       <th>Participating brands</th>
+                                       <th>Event date</th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+                              <% for(var i=0 ;i < events.length ;i++){ %>
+                                    <tr>
+                                      <td> <%= events[i].EventId %> </td>
+                                      <td> <%= events[i].CashPrize %> </td>
+                                      <td> <%= events[i].WinningCode %> </td>
+                                      <td> <%= events[i].ParticipatingBrands %> </td>
+                                      <td> <%= events[i].EventDate %> </td>
+                                    </tr>
+                              <% } %>
+                                    </tbody>
+                                      <tfoot>
+                                <tr>
+                                    <td colspan="12">
+                                    </td>
+                                </tr>
+                                </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+   </div>

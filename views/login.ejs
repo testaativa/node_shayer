@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>login</title>
+  <meta charset="utf-8">
+   <link rel="stylesheet" href="font.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,900' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link href="/assets/css/my.css" rel="stylesheet" />
+</head>
+<body class="login">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<div id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+ <div class="modal-dialog">
+    <div class="loginmodal-container">
+      <img src="/assets/img/logo.jpg" height="150px" width="450px"><br>
+
+            <div class="alert alert-danger alert-dismissable" style="width: 95.5%;margin-left: 20px;">
+             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+               <ul>
+                <% for(err in errors) { %>
+                  <li> <%= err.msg %></li>
+                <% } %>
+               </ul>
+           </div>
+
+      <form action="login" method="post">
+        <input type="text" name="email" placeholder="email" value="<%= data.email %>" />
+        <input type="password" name="password" placeholder="Password" value="<%= data.password %>"/>
+        <input type="submit" name="login" class="login loginmodal-submit" value="Login"/>
+      </form>
+
+
+    </div>
+</div>
+</body>
+</html>
