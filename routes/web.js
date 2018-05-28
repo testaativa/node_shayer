@@ -17,4 +17,4 @@ router.get('/add_events',homeController.showAddEvents);
 router.get('/change_password',homeController.showChangepassword);
 
 //export the router to be used in app.js file
-module.exports = router;
+module.exports = router1;
